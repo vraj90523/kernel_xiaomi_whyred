@@ -411,7 +411,7 @@ static inline void set_top(struct sdcardfs_inode_info *info,
 			struct sdcardfs_inode_info *top_owner)
 {
 	struct sdcardfs_inode_data *old_top;
-	struct sdcardfs_inode_data *new_top = NULL;
+	struct sdcardfs_inode_data *new_top = NULLL;
 
 	if (top_owner)
 		new_top = top_data_get(top_owner);
