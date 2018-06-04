@@ -34,7 +34,11 @@ CONFIG_CNSS_GENL=y
 =======
 CONFIG_CPU_WAKE_BOOST=y
 CONFIG_FB_MSM_MDSS_KCAL_CTRL=y
+<<<<<<< HEAD
 >>>>>>> 6cf3ff8... WhyRed: Enable KCAL Color Control
+=======
+CONFIG_WIREGUARD=y
+>>>>>>> df0f93a... WhyRed: Enable WireGuard
 #CONFIG_QCOM_MINIDUMP=y
 CONFIG_MSM_PERFORMANCE_HOTPLUG_ON=y
 CONFIG_SDCARD_FS=y
