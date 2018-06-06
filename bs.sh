@@ -15,7 +15,8 @@
 KERNEL_DIR=$PWD
 KERNEL="Image.gz-dtb"
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
-EXFAT_MOD=$KERNEL_DIR/out/arch/arm64/boot/
+EXFAT_MOD=$KERNEL_DIR/out/
+
 BUILD_START=$(date +"%s")
 #ANYKERNEL_DIR=/root/AnyKernel2
 ANYKERNEL_DIR=/home/kirkirehani93/AnyKernel2
