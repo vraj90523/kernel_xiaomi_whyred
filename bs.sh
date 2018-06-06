@@ -15,6 +15,7 @@
 KERNEL_DIR=$PWD
 KERNEL="Image.gz-dtb"
 KERN_IMG=$KERNEL_DIR/out/arch/arm64/boot/Image.gz-dtb
+EXFAT_MOD=$KERNEL_DIR/out/arch/arm64/boot/
 BUILD_START=$(date +"%s")
 #ANYKERNEL_DIR=/root/AnyKernel2
 ANYKERNEL_DIR=/home/kirkirehani93/AnyKernel2
@@ -77,7 +78,7 @@ echo "       Making Flashable Zip       "
   
 rm -rf ${ANYKERNEL_DIR}/modules/system/vendor/lib/$
 
-cp ${KERN_IMG}/fs/exfat/exfat.ko ${ANYKERNEL_DIR}/$
+cp ${EXFAT_MOD}/fs/exfat/exfat.ko ${ANYKERNEL_DIR}/$
 
 mkdir -p ${ANYKERNEL_DIR}/modules/system/vendor/li$
 
@@ -90,7 +91,7 @@ else
    BUILD_RESULT_STRING="BUILD FAILED"
 fi
 
-NOW=$(date +"%m-%d")
+NOW=$(date +"%m-%d-%H-%M")
 ZIP_LOCATION=${ANYKERNEL_DIR}/${ZIP_NAME}.zip
 ZIP_EXPORT=${EXPORT_DIR}/${NOW}
 ZIP_EXPORT_LOCATION=${EXPORT_DIR}/${NOW}/${ZIP_NAME}.zip
