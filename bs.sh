@@ -68,6 +68,21 @@ echo "       Making Flashable Zip       "
    echo "MAKING FLASHABLE ZIP"
 
    cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage
+
+#adding modules for exfat
+
+ rm -f ${ANYKERNEL_DIR}/Image.gz*                 
+ rm -f ${ANYKERNEL_DIR}/zImage*                    
+ rm -f ${ANYKERNEL_DIR}/dtb*                      
+  
+rm -rf ${ANYKERNEL_DIR}/modules/system/vendor/lib/$
+
+cp ${KERN_IMG}/fs/exfat/exfat.ko ${ANYKERNEL_DIR}/$
+
+mkdir -p ${ANYKERNEL_DIR}/modules/system/vendor/li$
+
+#adding modules for exfat
+
    cd ${ANYKERNEL_DIR}
    zip -r9 ${ZIP_NAME}.zip * -x README ${ZIP_NAME}.zip
 
