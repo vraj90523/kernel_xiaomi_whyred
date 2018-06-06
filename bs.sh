@@ -69,13 +69,14 @@ echo "       Making Flashable Zip       "
    # Make the zip file
    echo "MAKING FLASHABLE ZIP"
 
-   cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage
 
 #adding modules for exfat
 
  rm -f ${ANYKERNEL_DIR}/Image.gz*                 
  rm -f ${ANYKERNEL_DIR}/zImage*                    
- rm -f ${ANYKERNEL_DIR}/dtb*                      
+ rm -f ${ANYKERNEL_DIR}/dtb*                  
+
+cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage  
   
 rm -rf ${ANYKERNEL_DIR}/modules/system/vendor/lib/modules
 
