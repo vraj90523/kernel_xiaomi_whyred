@@ -6121,6 +6121,7 @@ static int tasha_codec_enable_adc(struct snd_soc_dapm_widget *w,
 	return 0;
 }
 
+
 static int tasha_codec_enable_dmic(struct snd_soc_dapm_widget *w,
 		struct snd_kcontrol *kcontrol, int event)
 {
