@@ -15,7 +15,7 @@
 #include <linux/slab.h>
 #include "cpufreq_governor.h"
 /*#include <linux/display_state.h>*/
-#inlcude  <linux/state_notifier.h>
+#include  <linux/state_notifier.h>
 /* Relaxed version macros */
 #define RELAXED_VERSION_MAJOR			(1)
 #define RELAXED_VERSION_MINOR			(0)
