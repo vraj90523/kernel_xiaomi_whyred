@@ -1738,7 +1738,7 @@ out:
 
 	}
 
-out:
+/*out:*/
 	kfree(rollover);
 	mutex_unlock(&fanout_mutex);
 	return err;

@@ -29,7 +29,7 @@ MDIR	?= /lib/modules/$(shell uname -r)
 PWD	:= $(shell pwd)
 PWD	:= $(shell pwd)
 
-export CONFIG_EXFAT_FS := m
+export CONFIG_EXFAT_FS := y
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
