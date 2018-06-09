@@ -1728,6 +1728,14 @@ static int fanout_add(struct sock *sk, u16 id, u16 type_flags)
 	if (err && !refcount_read(&match->sk_ref)) {
 		list_del(&match->list);
 		kfree(match);
+
+	}
+
+out:
+	if (err && rollover) {
+		kfree(rollover);
+		po->rollover = NULL;
+
 	}
 
 out:
