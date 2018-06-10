@@ -3490,7 +3490,7 @@ static int ffs_func_setup(struct usb_function *f,
 	__ffs_event_add(ffs, FUNCTIONFS_SETUP);
 	spin_unlock_irqrestore(&ffs->ev.waitq.lock, flags);
 
-	ffs_log("exit");
+
 
 	return USB_GADGET_DELAYED_STATUS;
 }

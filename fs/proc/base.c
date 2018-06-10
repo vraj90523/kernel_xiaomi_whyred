@@ -2049,11 +2049,13 @@ static int dname_to_vma_addr(struct dentry *dentry,
 	if (len & KSTRTOX_OVERFLOW)
 		return -EINVAL;
 	if (sval != (unsigned long)sval)
+
 		return -EINVAL;
 	str += len;
 
 	if (*str != '-')
 		return -EINVAL;
+
 	str++;
 
 	len = _parse_integer(str, 16, &eval);
