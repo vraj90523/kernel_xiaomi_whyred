@@ -1,7 +1,7 @@
 /*
  *
  * Automatically generated file; DO NOT EDIT.
- * Linux/arm64 4.4.135 Kernel Configuration
+ * Linux/arm64 4.4.136 Kernel Configuration
  *
  */
 #define CONFIG_WIL6210_PLATFORM_MSM 1
