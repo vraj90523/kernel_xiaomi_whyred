@@ -948,7 +948,6 @@ config MSM_CACHE_M4M_ERP64_PANIC_ON_UE
          are detected.
 
 config STATE_NOTIFIER
-		bool "State Notifier"
-
+    bool "State Notifier"
 
 source "drivers/soc/qcom/memshare/Kconfig"
