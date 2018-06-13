@@ -336,7 +336,6 @@ config CPU_FREQ_GOV_SCHED
 
 	  If in doubt, say N.
 
-<<<<<<< HEAD
 config CPU_FREQ_GOV_SCHEDUTIL
 	bool "'schedutil' cpufreq policy governor"
 	depends on CPU_FREQ && SMP
@@ -362,7 +361,7 @@ config CPU_WAKE_BOOST
 	  is powered on, as reported by the framebuffer chain notifier. This helps
 	  make the display power on faster, as well as ensures good performance
 	  immediately after powering on the display.
-=======
+
 config CPU_FREQ_GOV_ALUCARD
 	bool "'alucard' cpufreq policy governor"
 	help
@@ -376,9 +375,6 @@ config CPU_FREQ_GOV_ALUCARD
 	  For details, take a look at linux/Documentation/cpu-freq.
 
 	  If in doubt, say N.
->>>>>>> cc28be7... cpufreq_alucard: Imported my cpu governor.
-
-comment "CPU frequency scaling drivers"
 
 config CPUFREQ_DT
 	tristate "Generic DT based cpufreq driver"
