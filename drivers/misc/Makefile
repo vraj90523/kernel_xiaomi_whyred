@@ -89,7 +89,7 @@ targets += lkdtm_rodata.o lkdtm_rodata_objcopy.o
 $(obj)/lkdtm_rodata_objcopy.o: $(obj)/lkdtm_rodata.o FORCE
 	$(call if_changed,objcopy)
 
-obj-$(CONFIG_BOOTLOADER_LOG)	+= bootloader_log.o
+
 obj-$(CONFIG_FORCE_FAST_CHARGE) += fastchg.o
 
 
