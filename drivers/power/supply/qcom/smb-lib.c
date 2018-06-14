@@ -35,21 +35,6 @@
 #define LCT_JEITA_CCC_AUTO_ADJUST  0
 #endif
 
-#include <linux/power/oem_external_fg.h>
-#include <linux/gpio.h>
-#include <linux/delay.h>
-#include <linux/input/qpnp-power-on.h>
-#include <linux/spmi.h>
-#if defined(CONFIG_FB)
-#include <linux/notifier.h>
-#include <linux/fb.h>
-#elif defined(CONFIG_MSM_RDM_NOTIFY)
-#include <linux/msm_drm_notify.h>
-#include <linux/notifier.h>
-#endif /*CONFIG_FB*/
-#include <linux/moduleparam.h>
-#include <linux/msm-bus.h>
-
 #ifdef CONFIG_FORCE_FAST_CHARGE
 #include <linux/fastchg.h>
 #endif
