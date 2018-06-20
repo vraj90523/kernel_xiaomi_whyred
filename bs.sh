@@ -22,7 +22,7 @@ ANYKERNEL_DIR=/home/kirkirehani93/AnyKernel2
 EXPORT_DIR=/home/kirkirehani93/flashablezips
 
 # Make Changes to this before release
-ZIP_NAME="Kirks-R1.1"
+ZIP_NAME="Kirks-R1.5"
 
 # Tweakable Options Below
 export ARCH=arm64
@@ -67,7 +67,28 @@ echo "       Making Flashable Zip       "
    # Make the zip file
    echo "MAKING FLASHABLE ZIP"
 
-   cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage
+
+#adding modules for exfat
+
+ rm -f ${ANYKERNEL_DIR}/Image.gz*                 
+ rm -f ${ANYKERNEL_DIR}/zImage*                    
+ rm -f ${ANYKERNEL_DIR}/dtb*                  
+
+
+cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage  
+
+#since modules are compiled inline with kernel , we dont need this  
+#rm -rf ${ANYKERNEL_DIR}/modules/system/vendor/lib/modules
+
+#mkdir -p ${ANYKERNEL_DIR}/modules/system/vendor/lib/modules
+
+
+#cp ${EXFAT_MOD}fs/exfat/exfat.ko ${ANYKERNEL_DIR}/modules/system/vendor/lib/modules/exfat.ko
+
+
+#adding modules for exfat
+
+
    cd ${ANYKERNEL_DIR}
    zip -r9 ${ZIP_NAME}.zip * -x README ${ZIP_NAME}.zip
 
