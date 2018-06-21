@@ -487,6 +487,7 @@ config TCP_CONG_CUBIC
 
 config TCP_CONG_WESTWOOD
 	tristate "TCP Westwood+"
+	depends on INET
 	default m
 	---help---
 	TCP Westwood+ is a sender-side only modification of the TCP Reno
@@ -550,7 +551,7 @@ config TCP_CONG_SCALABLE
 
 config TCP_CONG_LP
 	tristate "TCP Low Priority"
-	default n
+	default y
 	---help---
 	TCP Low Priority (TCP-LP), a distributed algorithm whose goal is
 	to utilize only the excess network bandwidth as compared to the
@@ -559,7 +560,7 @@ config TCP_CONG_LP
 
 config TCP_CONG_VENO
 	tristate "TCP Veno"
-	default n
+	default y
 	---help---
 	TCP Veno is a sender-side only enhancement of TCP to obtain better
 	throughput over wireless networks. TCP Veno makes use of state
@@ -571,7 +572,7 @@ config TCP_CONG_VENO
 config TCP_CONG_YEAH
 	tristate "YeAH TCP"
 	select TCP_CONG_VEGAS
-	default n
+	default y
 	---help---
 	YeAH-TCP is a sender-side high-speed enabled TCP congestion control
 	algorithm, which uses a mixed loss/delay approach to compute the
@@ -584,7 +585,7 @@ config TCP_CONG_YEAH
 
 config TCP_CONG_ILLINOIS
 	tristate "TCP Illinois"
-	default n
+	default y
 	---help---
 	TCP-Illinois is a sender-side modification of TCP Reno for
 	high speed long delay links. It uses round-trip-time to
@@ -596,7 +597,7 @@ config TCP_CONG_ILLINOIS
 
 config TCP_CONG_DCTCP
 	tristate "DataCenter TCP (DCTCP)"
-	default n
+	default y
 	---help---
 	DCTCP leverages Explicit Congestion Notification (ECN) in the network to
 	provide multi-bit feedback to the end hosts. It is designed to provide:
@@ -617,7 +618,7 @@ config TCP_CONG_DCTCP
 
 config TCP_CONG_CDG
 	tristate "CAIA Delay-Gradient (CDG)"
-	default n
+	default y
 	---help---
 	CAIA Delay-Gradient (CDG) is a TCP congestion control that modifies
 	the TCP sender in order to:
