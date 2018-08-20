@@ -94,7 +94,7 @@ bool backlight_dimmer = false;
 module_param(backlight_dimmer, bool, 0755);
 
 int backlight_min = 0;
-int backlight_max = 255;
+int backlight_max = 4095;
 
 
 module_param(backlight_min, int, 0755);
