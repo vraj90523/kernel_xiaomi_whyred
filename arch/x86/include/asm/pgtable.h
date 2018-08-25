@@ -403,19 +403,10 @@ static inline pud_t pud_set_flags(pud_t pud, pudval_t set)
 	pudval_t v = native_pud_val(pud);
 
 	return __pud(v | set);
+
 }
 
-=======
-}
 
-static inline pud_t pud_set_flags(pud_t pud, pudval_t set)
-{
-	pudval_t v = native_pud_val(pud);
-
-	return __pud(v | set);
-}
-
->>>>>>> FETCH_HEAD
 static inline pud_t pud_clear_flags(pud_t pud, pudval_t clear)
 {
 	pudval_t v = native_pud_val(pud);
@@ -427,6 +418,7 @@ static inline pud_t pud_mkhuge(pud_t pud)
 {
 	return pud_set_flags(pud, _PAGE_PSE);
 }
+
 
 static inline u64 flip_protnone_guard(u64 oldval, u64 val, u64 mask);
 
