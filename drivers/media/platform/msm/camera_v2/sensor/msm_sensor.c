@@ -286,6 +286,8 @@ int msm_sensor_match_vendor_id(struct msm_sensor_ctrl_t *s_ctrl)
 		&vendorid,
 		s_ctrl->sensordata->vendor_id_info->data_type);
 
+	if ( rc  = 0 ) 
+	{
 	if (s_ctrl->sensordata->vcm_id_info->vcm_id_addr != 0) {
 		msm_camera_cci_i2c_read(
 		sensor_i2c_client,
@@ -293,6 +295,7 @@ int msm_sensor_match_vendor_id(struct msm_sensor_ctrl_t *s_ctrl)
 		&vcmid,
 		s_ctrl->sensordata->vcm_id_info->data_type);
 		have_vcmid = 1;
+	}
 	}
 
 	sensor_i2c_client->cci_client->sid = temp_sid;
