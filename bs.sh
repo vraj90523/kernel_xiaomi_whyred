@@ -24,7 +24,7 @@ ANYKERNEL_DIR=/home/kirkirehani93/AnyKernel2
 EXPORT_DIR=/home/kirkirehani93/flashablezips
 
 # Make Changes to this before release
-ZIP_NAME="Kirks-R2.0-Unified"
+ZIP_NAME="Kirks-Test"
 
 # Tweakable Options Below
 export ARCH=arm64
@@ -36,6 +36,9 @@ export CROSS_COMPILE="/home/kirkirehani93/kernel/tc/bin/aarch64-linux-android-"
 #export KBUILD_COMPILER_STRING=$(/root/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 
 echo "  Initializing build to compile Ver: $ZIP_NAME    "
+
+echo "Remove old Zimage"
+rm -rf $KERN_IMG
 
 echo "         Creating Output Directory: out      "
 
@@ -76,7 +79,6 @@ echo "       Making Flashable Zip       "
  rm -f ${ANYKERNEL_DIR}/zImage*                    
  rm -f ${ANYKERNEL_DIR}/dtb*                  
 
-*/
 cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage  
 
 #since modules are compiled inline with kernel , we dont need this  
