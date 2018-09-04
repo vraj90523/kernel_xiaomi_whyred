@@ -849,11 +849,7 @@ cas2_action:
 cas2_end:
 	/* Free lock */
 	sync
-<<<<<<< HEAD
-	stw,ma	%r20, 0(%sr2,%r20)
-=======
 	stw	%r20, 0(%sr2,%r20)
->>>>>>> FETCH_HEAD
 	/* Enable interrupts */
 	ssm	PSW_SM_I, %r0
 	/* Return to userspace, set no error */
