@@ -168,7 +168,7 @@ skip:
 	return ret;
 }
 
-bool is_swap_ratio_group(int prio)
+int  is_swap_ratio_group(int prio)
 {
 	return ((prio >= SWAP_RATIO_GROUP_START) &&
 		(prio <= SWAP_RATIO_GROUP_END)) ? true : false;
@@ -177,7 +177,7 @@ bool is_swap_ratio_group(int prio)
 void setup_swap_ratio(struct swap_info_struct *p, int prio)
 {
 	/* Used only if sysctl_swap_ratio_enable is set */
-	if (is_swap_ratio_group(prio)) {
+	if (is_swap_ratio_group(p->prio)) {
 		if (p->flags & SWP_FAST)
 			p->write_pending = SWAP_FAST_WRITES;
 		else
