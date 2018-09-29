@@ -35331,7 +35331,10 @@ static struct comp_testvec lz4hc_decomp_tv_template[] = {
 	},
 };
 
-static const struct comp_testvec zstd_comp_tv_template[] = {
+#define ZSTD_COMP_TEST_VECTORS 2
+#define ZSTD_DECOMP_TEST_VECTORS 2
+
+static struct comp_testvec zstd_comp_tv_template[] = {
 	{
 		.inlen	= 68,
 		.outlen	= 39,
@@ -35367,7 +35370,7 @@ static const struct comp_testvec zstd_comp_tv_template[] = {
 	},
 };
 
-static const struct comp_testvec zstd_decomp_tv_template[] = {
+static struct comp_testvec zstd_decomp_tv_template[] = {
 	{
 		.inlen	= 43,
 		.outlen	= 68,
