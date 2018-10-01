@@ -73,7 +73,7 @@ echo "       Making Flashable Zip       "
  rm -f ${ANYKERNEL_DIR}/Image.gz*                 
  rm -f ${ANYKERNEL_DIR}/zImage*                    
  rm -f ${ANYKERNEL_DIR}/dtb*                  
-
+ rm -f ${ANYKERNEL_DIR}/*.zip	
 
 cp -vr ${KERN_IMG} ${ANYKERNEL_DIR}/zImage  
 
