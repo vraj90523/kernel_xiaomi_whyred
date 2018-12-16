@@ -31,7 +31,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER="Kirkhan93"
 export KBUILD_BUILD_HOST="Flash"
-#export CROSS_COMPILE="/root/aarch64-linux-android-4.9/bin/aarch64-linux-android-"
+#export CROSS_COMPILE="home/vikash/aarch64-linux-android-4.9"
 export CROSS_COMPILE="/home/kirkirehani93/kernel/tc/bin/aarch64-linux-android-"
 #export KBUILD_COMPILER_STRING=$(/root/platform_prebuilts_clang_host_linux-x86/clang-r328903/bin/clang --version | head -n 1 | perl -pe 's/\(http.*?\)//gs' | sed -e 's/  */ /g' -e 's/[[:space:]]*$//')
 
